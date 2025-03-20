@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tife Ltd - Bag Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+header {
+    background: #444;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    background: #666;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    padding: 30px;
+    background: white;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Gallery Styling */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bag-item {
+    width: 250px;
+    margin: 15px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bag-item:hover {
+    transform: scale(1.05);
+}
+
+.bag-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.bag-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.bag-item p {
+    font-size: 16px;
+    color: green;
+    font-weight: bold;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tife Ltd</h1>
+        <p>Quality Bags at Affordable Prices</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#gallery">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#gallery"></a></li>
+        </ul>
+    </nav>
+
+    <section id="gallery">
+        <h2>Bag Gallery</h2>
+        <div class="gallery-container" id="bag-gallery"></div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> +234 907 792 0151</p>
+        <p><strong>Email:</strong> lateefahmed3852@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Tife Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<script>
+  const bags = [
+    { name: "Leather Handbag", price: "₦15,000", image: "images/bag1.jpg" },
+    { name: "Backpack", price: "₦12,000", image: "images/bag2.jpg" },
+    { name: "Tote Bag", price: "₦10,500", image: "images/bag3.jpg" },
+    { name: "Travel Duffel", price: "₦20,000", image: "images/bag4.jpg" }
+];
+
+function loadGallery() {
+    const gallery = document.getElementById("bag-gallery");
+    gallery.innerHTML = "";
+    
+    bags.forEach(bag => {
+        const bagItem = document.createElement("div");
+        bagItem.classList.add("bag-item");
+
+        bagItem.innerHTML = `
+            <img src="${bag.image}" alt="${bag.name}">
+            <h3>${bag.name}</h3>
+            <p>${bag.price}</p>
+        `;
+
+        gallery.appendChild(bagItem);
+    });
+}
+
+// Load gallery on page load
+window.onload = loadGallery;
+</script>
