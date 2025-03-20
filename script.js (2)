@@ -1,0 +1,27 @@
+// Testimonial Section
+const testimonials = [
+    "Great bags! High quality and affordable. - Sarah",
+    "Excellent customer service and stylish designs. - James",
+    "I love my new bag! Thank you, Tife Ltd. - Aisha"
+];
+
+function displayTestimonials() {
+    const container = document.getElementById("testimonials-container");
+    container.innerHTML = "";
+    testimonials.forEach(testimonial => {
+        const p = document.createElement("p");
+        p.textContent = testimonial;
+        container.appendChild(p);
+    });
+}
+
+function addTestimonial() {
+    const newTestimonial = prompt("Enter your testimonial:");
+    if (newTestimonial) {
+        testimonials.push(newTestimonial);
+        displayTestimonials();
+    }
+}
+
+// Load testimonials on page load
+window.onload = displayTestimonials;

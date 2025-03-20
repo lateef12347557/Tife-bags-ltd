@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tife Ltd - Quality Bags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">Tife Ltd</h1>
+        <p class="slide-in">Your One-Stop Shop for Quality Bags</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#open-days">Open Days</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="images/download (1).jpeg" alt="Bag 1">
+            <img src="images/download (2).jpeg" alt="Bag 2">
+            <img src="images/download (3).jpeg" alt="Bag 3">
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Wholesale and Retail Bag Sales</li>
+            <li>Custom-Made Designer Bags</li>
+            <li>Bag Repair and Maintenance</li>
+        </ul>
+    </section>
+
+    <section id="open-days">
+        <h2>Our Open Days</h2>
+        <p>We are open from <strong>Monday to Saturday, 9 AM - 7 PM</strong>. Closed on Sundays.</p>
+    </section>
+
+    <section id="testimonials">
+        <h2>Customer Testimonials</h2>
+        <div id="testimonials-container"></div>
+        <button onclick="addTestimonial()">Add Testimonial</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> +234 907 792 0151</p>
+        <p><strong>Email:</strong> info@tifeltd.com</p>
+        
+        <h3>Send Us a Message</h3>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="form-status"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Tife Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
