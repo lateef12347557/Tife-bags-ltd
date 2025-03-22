@@ -25,3 +25,14 @@ function addTestimonial() {
 
 // Load testimonials on page load
 window.onload = displayTestimonials;
+
+
+function sendMail(){
+  let parms={
+    name:document.getElementById("name").value,
+    email:document.getElementById("email").value,
+    message:document.getElementById("message").value
+    
+  }
+  emailjs.send("service_o521wf4","template_wrd9wtb",parms).then(alert("your email has been sent"))
+}
